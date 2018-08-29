@@ -4,19 +4,19 @@ import java.util.Scanner;
  * Do not modify this main function.
  * @author     : SandhyaKamisetty
  */
-public class Solution {
+public final class Solution {
 	/**
-	* private constructor
+	* private constructor.
 	*/
-	private Solution(){
-	// we are not using this constructor
+	private Solution() {
+	// we are not using this constructor.
 	}
 	 /**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
@@ -24,7 +24,7 @@ public class Solution {
         System.out.println((int) gcd(n1, n2));
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      n1    The n 1
      * @param      n2    The n 2
