@@ -7,24 +7,22 @@ import java.util.Scanner;
  */
 public class Solution {
 	/**
-	 * private constructor
-	 *
-	 * @param      args  The arguments
-	 */
+	* private constructor
+	*/
 	private Solution(){
-		// we are not using this constructor
+	// we are not using this constructor
 	}
-	/**
+	 /**
 	 * { function_description }
 	 *
 	 * @param      args  The arguments
 	 */
 	public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println((int)gcd(n1,n2));
+        System.out.println((int) gcd(n1, n2));
     }
     /**
      * { function_description }
@@ -34,11 +32,11 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-	public static int gcd(final int n1, final int n2){
+	public static int gcd(final int n1, final int n2) {
 		int gcd = 0;
-		for(int i = 1;i<=n1&&i<=n2;i++){
-			if(n1%i==0 && n2%i==0){
-				gcd = i;
+		for(int i = 1; i <= n1 && i <= n2; i++) {
+			if(n1 % i == 0 && n2 % i == 0) {
+			  gcd = i;
 				/* return gcd;*/
 
 			}
