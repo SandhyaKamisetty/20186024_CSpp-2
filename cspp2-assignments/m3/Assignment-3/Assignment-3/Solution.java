@@ -1,22 +1,21 @@
 import java.util.Scanner;
-
 /**
  * Do not modify this main function.
  * @author     : SandhyaKamisetty
  */
 public final class Solution {
-	/**
-	* private constructor.
-	*/
-	private Solution() {
-	// we are not using this constructor.
-	}
-	 /**
-	 * { function_description }.
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(final String[] args) {
+    /**
+    * private constructor.
+    */
+    private Solution() {
+    // we are not using this constructor.
+    }
+     /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
@@ -31,15 +30,15 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-	public static int gcd(final int n1, final int n2) {
-		int gcd = 0;
-		for(int i = 1; i <= n1 && i <= n2; i++) {
-			if(n1 % i == 0 && n2 % i == 0) {
-			  gcd = i;
-				/* return gcd;*/
+    public static int gcd(final int n1, final int n2) {
+        int gcd = 0;
+        for (int i = 1; i <= n1 && i <= n2; i++) {
+            if (n1 % i == 0 && n2 % i == 0) {
+              gcd = i;
+                /* return gcd;*/
 
-			}
-		}
-		return gcd;
-	}
+            }
+        }
+        return gcd;
+    }
 }
