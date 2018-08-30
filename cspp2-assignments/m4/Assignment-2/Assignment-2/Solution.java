@@ -5,7 +5,7 @@ import java.util.*;
  */
 public final class Solution {
     /**
-    * Fill the main function to print resultant of addition of matrices
+    * Fill the main function to print resultant of addition of matrices.
     */
     private Solution() {
     //We are not using this constructor.
@@ -36,16 +36,16 @@ public final class Solution {
             }
 
         }
-        int sum[][] = new int[r1][c1];
-        for (int nr = 0; nr < r1; nr++) {
-            for (int nc = 0; nc <c1; nc++) {
-                sum[nr][nc] = arr1[nr][nc] + arr2[nr][nc]; 
+        if(r1==r2 && c1==c2) {
+            int sum[][] = new int[r1][c1];
+            for (int nr = 0; nr < r1; nr++) {
+                for (int nc = 0; nc <c1; nc++) {
+                    sum[nr][nc] = arr1[nr][nc] + arr2[nr][nc]; 
+
+                }
 
             }
 
-        }
-
-        if(r1==r2 && c1==c2) {
             for (int nr = 0; nr < r1; nr++) {
                 for (int nc = 0; nc < r1; nc++) {
                     if(nc==r1-1) {
