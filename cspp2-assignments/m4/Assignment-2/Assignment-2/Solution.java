@@ -36,7 +36,7 @@ public final class Solution {
             }
 
         }
-        if(r1 == r2 && c1 == c2) {
+        if (r1 == r2 && c1 == c2) {
             int[][] sum = new int[r1][c1];
             for (int nr = 0; nr < r1; nr++) {
                 for (int nc = 0; nc < c1; nc++) {
