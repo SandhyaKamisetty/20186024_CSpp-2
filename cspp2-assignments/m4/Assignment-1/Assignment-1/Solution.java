@@ -1,7 +1,11 @@
 import java.util.Scanner;
-public final class Solution
-{/*
-    Fill this main function to print maximum of given array
+/**
+ * Do not modify this main function.
+ * @author     : SandhyaKamisetty
+ */
+public final class Solution {
+    /**
+    *Fill this main function to print maximum of given array
     */
     private Solution() {
     //We are not using this constructor.
@@ -25,7 +29,7 @@ public final class Solution
             }
         }
         System.out.println(max);
-        
+
 
     }
 }
