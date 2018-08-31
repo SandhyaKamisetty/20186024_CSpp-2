@@ -20,22 +20,23 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args){
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String string = s.nextLine();
         String reverse = reverseString(string);
         System.out.println(reverse);
     }
+    
     /**
-     * REVERSE STRING.
+     * { function_description }
      *
-     * @param      s     s is a string.
+     * @param      string  The string
      *
-     * @return     returns reverse of a string s.
+     * @return     { description_of_the_return_value }
      */
-    static String reverseString(final String string){
+    static String reverseString(final String string) {
         String str1 = "";
-        for (int i = string.length() - 1; i >= 0; i--){
+        for (int i = string.length() - 1; i >= 0; i--) {
             str1 += string.charAt(i);
         }
         return str1;
