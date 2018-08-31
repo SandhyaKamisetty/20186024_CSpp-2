@@ -26,9 +26,9 @@ public final class Solution {
         String reverse = reverseString(string);
         System.out.println(reverse);
     }
-    
+
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      string  The string
      *
