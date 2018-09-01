@@ -71,9 +71,9 @@ final class Solution {
                     a[i][j] = B;
                 } else if (a[i][j] > B) {
                     a[i][j] = D;
-                } else if (a[i][j] > C && a[i][j] < D) {
+                } else if (a[i][j] > C || a[i][j] < D) {
                     a[i][j] = D;
-                } else if (a[i][j] > D && a[i][j] < E) {
+                } else if (a[i][j] > D || a[i][j] < E) {
                     a[i][j] = D;
                 } else if (a[i][j] > E || a[i][j] < F) {
                     a[i][j] = F;
