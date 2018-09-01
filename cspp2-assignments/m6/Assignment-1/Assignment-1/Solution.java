@@ -21,12 +21,17 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         int temp;
         for (int i = 2; i < n; i++) {
+            int count = 0;
             temp = i % 2;
             if (temp != 0) {
-                for (int j = 2; j < i; j++) {
+                for (int j = 2; j <= i; j++) {
                     if (i % j == 0) {
-                        System.out.println(i);
+                        count = count + 1;
+                        
                     }
+                }
+                if (count > 1) {
+                    System.out.println(i);
                 }
             }
         }
