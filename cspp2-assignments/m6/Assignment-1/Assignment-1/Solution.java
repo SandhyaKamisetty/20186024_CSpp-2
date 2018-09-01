@@ -23,10 +23,9 @@ public final class Solution {
         for (int i = 2; i < n; i++) {
             temp = i % 2;
             if (temp != 0) {
-                temp = i;
                 for (int j = 2; j < i; j++) {
-                    if (temp % j == 0) {
-                        System.out.println(temp);
+                    if (i % j == 0) {
+                        System.out.println(i);
                     }
                 }
             }
