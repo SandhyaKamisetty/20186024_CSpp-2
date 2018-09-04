@@ -62,8 +62,17 @@ public class List {
      * class variables with some default values.
      */
     private int[] arr;
+
+    /**
+     * { var_description }
+     */
     private int size;
+
+    /**
+     * Constructs the object.
+     */
     public List() {
+
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
