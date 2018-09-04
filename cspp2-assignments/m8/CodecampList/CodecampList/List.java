@@ -191,7 +191,7 @@ public class List {
             return arr[index];
         } else {
             return -1;
-      }
+        }
     }
 
     /*
@@ -223,10 +223,10 @@ public class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for(int i = 0; i < size-1; i++) {
+        for (int i = 0; i < size-1; i++) {
             str = str + arr[i] + ",";
         }
-        str = str + arr[size-1] + "]";
+        str = str + arr[size - 1] + "]";
         return str;
     } 
     
@@ -269,7 +269,7 @@ public class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for(int i = 0; i <= arr.length-1; i++) {
+        for(int i = 0; i <= arr.length - 1; i++) {
             if(arr[i] == item) {
                 return i;
             }
@@ -319,7 +319,9 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {   
                 System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
