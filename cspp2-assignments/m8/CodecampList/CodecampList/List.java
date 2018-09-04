@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**
- * List class.
+ * @author : SandhyaKamisetty
  */
 
 public class List {
@@ -57,9 +57,13 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    private static final int TEN = 10;
+    /**
+     * { var_description }
      */
     private int[] arr;
 
@@ -85,7 +89,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        arr = new int[10];
+        arr = new int[TEN];
     }
     
     /*
@@ -98,6 +102,12 @@ public class List {
      * to the list.
      * 
      * The method returns void (nothing)
+     */
+
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
@@ -136,18 +146,24 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size-1 ; i++ ) {
+        if (index > size) {
+            System.out.println("Invalid Position Exception");
+            return;
+        }
+        for (int i = index; i < size-1 ; i++ ) {
             arr[i] = arr[i+1];
         }
         arr[size-1] = 0;
         size--;
-    } else {
-        System.out.println("Invalid Position Exception");
-    }
     }
 
     /*
@@ -161,9 +177,21 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int index) {
         // Replace the code below to write the code for get
+        if (index < size) {
         return arr[index];
+    } else {
+        return -1;
+    }
     }
 
     /*
@@ -186,6 +214,12 @@ public class List {
      * not all the elements of the array.
      *
      */
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String str = "[";
@@ -202,6 +236,14 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         // Replace the code below
         for(int element : arr){
@@ -217,7 +259,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for(int i = 0; i < arr.length-1; i++) {
             if(arr[i] == item) {
