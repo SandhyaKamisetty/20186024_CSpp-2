@@ -189,8 +189,8 @@ public class List {
         // Replace the code below to write the code for get
         if (index < size) {
             return arr[index];
-      } else {
-        return -1;
+        } else {
+            return -1;
       }
     }
 
