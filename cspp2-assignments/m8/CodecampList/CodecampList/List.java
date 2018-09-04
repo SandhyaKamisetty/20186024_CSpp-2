@@ -1,8 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**
+ * List class.
+ */
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -134,7 +137,7 @@ public class List {
         arr[size-1] = 0;
         size--;
     } else {
-        System.out.println("Invalid position Exception");
+        System.out.println("Invalid Position Exception");
     }
     }
 
@@ -215,7 +218,7 @@ public class List {
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -258,5 +261,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
