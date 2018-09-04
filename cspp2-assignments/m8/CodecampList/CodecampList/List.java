@@ -28,7 +28,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -50,7 +50,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -63,12 +63,12 @@ public class List {
      */
     private static final int TEN = 10;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int[] arr;
 
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int size;
 
@@ -91,7 +91,7 @@ public class List {
         size = 0;
         arr = new int[TEN];
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -100,12 +100,12 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
@@ -118,8 +118,14 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
+     */
+    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -179,7 +185,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      *
@@ -238,7 +244,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
