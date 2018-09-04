@@ -109,7 +109,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size++] = item;
     }
@@ -159,14 +159,14 @@ public class List {
             System.out.println("Invalid Position Exception");
             return;
         }
-        for (int i = index; i < size-1 ; i++ ) {
-            arr[i] = arr[i+1];
+        for (int i = index; i < size-1; i++) {
+            arr[i] = arr[i + 1];
         }
-        arr[size-1] = 0;
+        arr[size - 1] = 0;
         size--;
     }
 
-    /*
+    /**
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
@@ -188,10 +188,10 @@ public class List {
     public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < size) {
-        return arr[index];
-    } else {
-        return -1;
-    }
+            return arr[index];
+      } else {
+            return -1;
+      }
     }
 
     /*
@@ -244,7 +244,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for(int element : arr){
             if(element == item) {
@@ -259,16 +259,30 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
         // Replace the code below
-        for(int i = 0; i < arr.length-1; i++) {
+        for(int i = 0; i <= arr.length-1; i++) {
             if(arr[i] == item) {
-                return item;
+                return i;
             }
         }
         return -1;
     }
 
+
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
