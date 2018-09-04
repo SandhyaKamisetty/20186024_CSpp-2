@@ -123,7 +123,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
