@@ -121,7 +121,7 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
-    
+
     /**
      * { function_description }
      *
@@ -136,7 +136,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -180,7 +180,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
 
@@ -209,7 +209,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -229,13 +229,13 @@ public class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for (int i = 0; i < size-1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             str = str + arr[i] + ",";
         }
         str = str + arr[size - 1] + "]";
         return str;
-    } 
-    
+    }
+
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -252,8 +252,8 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for(int element : arr){
-            if(element == item) {
+        for (int element : arr) {
+            if (element == item) {
                 return true;
             }
         }
@@ -261,7 +261,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -275,8 +275,8 @@ public class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for(int i = 0; i <= arr.length - 1; i++) {
-            if(arr[i] == item) {
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] == item) {
                 return i;
             }
         }
@@ -325,8 +325,8 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                if (l.get(Integer.parseInt(tokens[1])) != -1) {   
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
             case "contains":
