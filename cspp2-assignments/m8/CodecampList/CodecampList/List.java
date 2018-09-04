@@ -190,7 +190,7 @@ public class List {
         if (index < size) {
             return arr[index];
       } else {
-            return -1;
+        return -1;
       }
     }
 
