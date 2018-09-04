@@ -154,7 +154,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      */
@@ -285,11 +285,11 @@ public class List {
 
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -337,3 +337,5 @@ public class List {
         }
     }
 }
+
+
