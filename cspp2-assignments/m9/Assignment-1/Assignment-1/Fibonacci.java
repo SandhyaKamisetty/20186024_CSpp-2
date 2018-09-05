@@ -29,7 +29,9 @@ public final class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    
+    private Fibonacci() {
+        
+    }
     /**
      * { function_description }.
      *
@@ -62,3 +64,5 @@ public final class Fibonacci {
         System.out.println(fib(n));
     }
 }
+
+
