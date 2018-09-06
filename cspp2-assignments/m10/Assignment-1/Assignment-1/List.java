@@ -33,7 +33,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
+    /**
+    * private list
+    */
     private int[] list;
 
     /*
@@ -59,6 +61,9 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    * giving size.
+    */
     private int size;
 
     /*
@@ -131,7 +136,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -151,22 +156,18 @@ public class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     *
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
-     * with the contents of the original array.
-     *
+     * with the contents of the original array
      * TODO
      * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     *
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
      * You know enough of Object Oriented Programming to answer these questions :-)
-     *
      */
 
     // todo create resize method
@@ -228,7 +229,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -260,7 +261,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -325,7 +326,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -344,16 +345,17 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
     /**
-    * Inserts all the elements of specified int
-    * array to the end of list
-    */
-
+     * Inserts all the elements of specified int.
+     *  array to the end of list.
+     *  @param      items  The items
+     */
 
     public void addAll(int items[]) {
         int a = items.length;
