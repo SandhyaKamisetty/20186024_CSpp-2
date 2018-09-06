@@ -3,31 +3,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 
+
 /**
  * Interface for string list interface.
  */
-interface StringListInterface
-{
-     /**
-      * { function_description }
-      *
-      * @param      item  The item
-      */
-     public void add(String item);
-     public void addAll(String items[]);
-     public String get(int index);
-     public int size();
-     public void remove(int index);
-     public boolean contains(String item);
-     public int indexOf(String item);
+interface StringListInterface {
+    public void add(String item);
+    public void addAll(String items[]);
+    public String get(int index);
+    public int size();
+    public void remove(int index);
+    public boolean contains(String item);
+    public int indexOf(String item);
 }
 //Write a StringList class which implements StringListInterface
 /**
-* @author : SandhyaKamisetty
 */
-
-
-public class StringList implements StringListInterface{
+public class StringList implements StringListInterface {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -51,10 +43,13 @@ public class StringList implements StringListInterface{
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private String[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    *initializing the string array.
+    */
     private String[] list;
 
     /*
@@ -74,21 +69,26 @@ public class StringList implements StringListInterface{
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    * initialaizing the size variable.
+    */
     private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
 
+
+    /**
+     * Constructs the object.
+     */
     public StringList() {
 
         // what are the two variables to be initialized here?
@@ -113,32 +113,22 @@ public class StringList implements StringListInterface{
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
+     *
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
 
     // todo - add an overloaded constructor here
-
     /**
-     * { function_description }.
-     *
-     * @param      n     { parameter_description }.
-     */
+    * overloading the constructor acc. to parameter.
+    */
     public void ListString(final int n) {
         size = 0;
         list = new String[n];
     }
 
-
-    
-    private void resize(final String item) {
-        list = Arrays.copyOf(list, size * 2);
-        list[size++] = item;
-    }
-    
     /*
      * The add method does what the name suggests.
      * Add an String item to the list.
@@ -147,42 +137,70 @@ public class StringList implements StringListInterface{
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
-    public void add(String item) {
+    /**
+     * adding a element in array.
+     * @param      item  is the input parameter.
+     */
+    public void add(final String item) {
+        //Inserts the specified element at the end of the list.
         if (size < list.length + 1) {
             list[size++] = item;
         } else {
             resize(item);
         }
-        //Inserts the specified element at the end of the list.
-       
     }
-    /*Inserts all the elements of specified int 
+    /*Inserts all the elements of specified int
     array to the end of list*/
-   
-    public void addAll(String[] items) {
-        for (int i = 0; i < items.length; i++) 
-            add(items[i]);
-        
+    /**
+     * Adds all aray elements in a array.
+     * @param      items  is the input parameter.
+     */
+    public void addAll(final String[] items) {
+        int g = items.length;
+        int in = 0;
+        if ((size + g) <= list.length) {
+            for (int j = size; j < (size + g) ; j++) {
+                list[j] = items[in];
+                in += 1;
+            }
+            size += g;
+        } else {
+            for (int i = 0; i < g; i++) {
+                resize(items[i]);
+            }
+        }
     }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * finding the size of array.
+     * @return     int size of the array.
      */
     public int size() {
         return size;
+    }
+    /**
+     * increasing the size of array.
+     * @param      item  is the input parmeter.
+     */
+    private void resize(final String item) {
+        list = Arrays.copyOf(list, size + 2);
+        list[size++] = item;
     }
 
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -198,11 +216,14 @@ public class StringList implements StringListInterface{
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
-    public void remove(int index) {
+    /**
+     * removing a element on a particular index.
+     * @param      index  is the input parameter.
+     */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-         if (index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -220,24 +241,20 @@ public class StringList implements StringListInterface{
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-
     /**
-     * { function_description }.
-     *
-     * @param      index  The index
-     *
-     * @return     { description_of_the_return_value }
+     * to get value at a particular index.
+     * @param      index  is the input parameter.
+     * @return     the value.
      */
-    public String get(int index) {
-        if (index < size) {
-            return list[index];
+    public String get(final int index) {
+        if (index < 0 || index >= size) {
+            return "-1";
         } else {
-            return null;
+            return list[index];
         }
-        
     }
 
     /*
@@ -249,7 +266,7 @@ public class StringList implements StringListInterface{
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -260,60 +277,56 @@ public class StringList implements StringListInterface{
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     * @return     String representation of the object.
+     */
     public String toString() {
-        String str = "[";
-        for (int i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+        if (size == 0) {
+            return "[]";
+        } else {
+            String str = "[";
+            int i = 0;
+            for (i = 0; i < size - 1; i++) {
+                str = str + list[i] + ",";
+            }
+            str = str + list[i] + "]";
+            return str;
         }
-        str = str + list[size - 1] + "]";
-        return str;
-       
     }
-    
+
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-
     /**
-     * { function_description }.
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
+     * checks if value is present in array or not.
+     * @param      item  is the input parameter.
+     * @return     boolean value.
      */
-    public boolean contains(String item) {
-        for (String element : list) {
-            if (element == item) {
-                return true;
-            }
-        }
-        return false;
-        
+    public boolean contains(final String item) {
+        return indexOf(item) == -1;
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-
     /**
      * Searches for the first match.
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }.
+     * @param      item  is the input parameter.
+     * @return     the index of first occurence.
      */
-    public int indexOf(String item) {
-        for (int i = 0; i <= list.length - 1; i++) {
-            if (list[i] == item) {
-                return i;
-            }
+    public int indexOf(final String item) {
+        int i;
+        for (i = 0; i < size; i++) {
+            if (item.equals(list[i]))
+                return -1;
         }
-        return -1;
-        
+        return i;
     }
+    
 }
