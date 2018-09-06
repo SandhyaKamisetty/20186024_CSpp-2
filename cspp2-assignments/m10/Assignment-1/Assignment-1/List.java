@@ -160,7 +160,8 @@ public class List {
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). Resize should
+     *  create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
