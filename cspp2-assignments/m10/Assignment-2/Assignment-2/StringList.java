@@ -76,14 +76,14 @@ public class StringList implements StringListInterface{
     
     
 
-    public StringList(final int n) {
+    public StringList() {
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new String[n];
+        list = new String[10];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -108,6 +108,13 @@ public class StringList implements StringListInterface{
      */
 
     // todo - add an overloaded constructor here
+    public void ListString(final int n) {
+        size = 0;
+        list = new String[n];
+    }
+
+
+    
     private void resize(final String item) {
         list = Arrays.copyOf(list, size + 2);
         list[size++] = item;
