@@ -1,5 +1,7 @@
 //An interface for ListADT of strings
 import java.util.Arrays;
+import java.util.Scanner;
+import java.io.BufferedInputStream;
 interface StringListInterface
 {
      public void add(String item);
@@ -74,14 +76,14 @@ public class StringList implements StringListInterface{
     
     
 
-    public StringList() {
+    public StringList(final int n) {
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new String[10];
+        list = new String[n];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -106,7 +108,10 @@ public class StringList implements StringListInterface{
      */
 
     // todo - add an overloaded constructor here
-
+    private void resize(final String item) {
+        list = Arrays.copyOf(list, size + 2);
+        list[size++] = item;
+    }
     
     /*
      * The add method does what the name suggests.
@@ -120,7 +125,11 @@ public class StringList implements StringListInterface{
      * The method returns void (nothing)
      */
     public void add(String item) {
-        list[size++] = item;
+        if (size < list.length + 1) {
+            list[size++] = item;
+        } else {
+            resize(item);
+        }
         //Inserts the specified element at the end of the list.
        
     }
