@@ -359,8 +359,7 @@ public class List {
      *  @param      items  The items
      */
 
-    public void addAll(final int[] items) 
-    {
+    public void addAll(final int[] items) {
         int a = items.length;
         int x = 0;
         if ((size + a) <= list.length) {
