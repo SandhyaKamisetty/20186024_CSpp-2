@@ -135,7 +135,7 @@ public class StringList implements StringListInterface{
 
     
     private void resize(final String item) {
-        list = Arrays.copyOf(list, size + 2);
+        list = Arrays.copyOf(list, size * 2);
         list[size++] = item;
     }
     
