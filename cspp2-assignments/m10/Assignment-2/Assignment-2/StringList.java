@@ -2,8 +2,17 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
+
+/**
+ * Interface for string list interface.
+ */
 interface StringListInterface
 {
+     /**
+      * { function_description }
+      *
+      * @param      item  The item
+      */
      public void add(String item);
      public void addAll(String items[]);
      public String get(int index);
@@ -12,7 +21,11 @@ interface StringListInterface
      public boolean contains(String item);
      public int indexOf(String item);
 }
-//Write a StringList class which implements StringListInterface 
+//Write a StringList class which implements StringListInterface
+/**
+* @author : SandhyaKamisetty
+*/
+
 
 public class StringList implements StringListInterface{
     //Implement all the methods mentioned to build a ListADT
@@ -108,6 +121,12 @@ public class StringList implements StringListInterface{
      */
 
     // todo - add an overloaded constructor here
+
+    /**
+     * { function_description }.
+     *
+     * @param      n     { parameter_description }.
+     */
     public void ListString(final int n) {
         size = 0;
         list = new String[n];
@@ -205,6 +224,14 @@ public class StringList implements StringListInterface{
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
+
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String get(int index) {
         if (index < size) {
             return list[index];
@@ -250,6 +277,14 @@ public class StringList implements StringListInterface{
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(String item) {
         for (String element : list) {
             if (element == item) {
@@ -264,6 +299,14 @@ public class StringList implements StringListInterface{
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }.
      */
     public int indexOf(String item) {
         for (int i = 0; i <= list.length - 1; i++) {
