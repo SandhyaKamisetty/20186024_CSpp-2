@@ -34,7 +34,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     /**
-    * private list
+    * private list.
     */
     private int[] list;
 
@@ -168,7 +168,8 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented
+     *  Programming to answer these questions :-)
      */
 
     // todo create resize method
@@ -358,7 +359,7 @@ public class List {
      *  @param      items  The items
      */
 
-    public void addAll(int items[]) {
+    public void addAll(final int items[]) {
         int a = items.length;
         int x = 0;
         if ((size + a) <= list.length) {
@@ -394,7 +395,7 @@ public class List {
                 list[i + 1] = list[i];
             }
             list[index] = item;
-            size ++;
+            size = size + 1;
         } else if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
@@ -424,7 +425,12 @@ public class List {
     }
 
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -444,8 +450,9 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
+                        if (t.length > 1) {
                             l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -485,7 +492,9 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default :
+            }
             }
         }
     }
-}
+
