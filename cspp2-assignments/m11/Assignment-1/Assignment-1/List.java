@@ -173,7 +173,7 @@ public class List {
         }
         str = str + list[i] + "]";
         //if (list[i] == 0) {
-            System.out.println("Invalid Position Exception");
+           // System.out.println("Invalid Position Exception");
         //}
         return str;
     } 
