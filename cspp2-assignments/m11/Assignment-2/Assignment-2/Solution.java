@@ -32,15 +32,26 @@ class Student {
         return this.name;
     }
 
+    
+    
     /**
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
-    public int hashcode() {
+    public int hashCode() {
         return 0;
     }
+
     @Override
+
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
@@ -601,4 +612,8 @@ public final class Solution {
         }
     }
 }
+
+
+
+
 
