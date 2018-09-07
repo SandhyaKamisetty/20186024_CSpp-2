@@ -17,8 +17,9 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
-        this.name = name;
+    public Student(final String name1) {
+    //A constructor used to initialize the instance variables
+        this.name = name1;
     }
 
     /**
@@ -26,10 +27,14 @@ class Student {
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
 
+    public int hashcode() {
+        return 0;
+    }
     @Override
     public boolean equals(Object other) { //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
