@@ -33,7 +33,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     /**
-    * declaring list
+    * declaring list.
     */
     private int[] list;
     /*
@@ -327,7 +327,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         // write the logic for subList
         if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
@@ -363,7 +363,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List lst) {
+    public boolean equals(final List lst) {
         // Replace the code below
         return this.toString().equals(lst.toString());
 
@@ -390,7 +390,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -462,12 +462,15 @@ public class List {
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
