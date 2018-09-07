@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -50,6 +52,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+    /**
+     * size declaration.
+     */
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -58,6 +63,10 @@ public class List {
     /*
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
+     */
+
+    /**
+     * Constructs the object.
      */
     public List() {
         list = new int[10];
@@ -83,6 +92,12 @@ public class List {
      *
      * The method returns void (nothing)
      */
+
+    /**
+     * adding items at end positions.
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         if (size == list.length) {
             resize();
@@ -90,6 +105,10 @@ public class List {
         list[size++] = item;
         //Inserts the specified element at the end of the list.
     }
+
+    /**
+     * resizing.
+     */
     public void resize() {
         list = Arrays.copyOf(list, size * 2);
     }
@@ -99,6 +118,12 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      *
+     */
+
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -118,6 +143,12 @@ public class List {
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
+     */
+
+    /**
+     * to remove item at specified index.
+     *
+     * @param      index  The index
      */
     public void remove(int index) {
         if (index >= 0 && index < size) {
@@ -144,6 +175,14 @@ public class List {
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
      */
+
+    /**
+     * to get an item at specified index.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(int index) {
         // Replace the code below to write the code for get
         if (index < 0 && index >= size) {
@@ -167,6 +206,12 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         if (size == 0) {
@@ -188,6 +233,14 @@ public class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
+
+    /**
+     * It checks whether the given item is present in list or not.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         // Replace the code below
         return indexOf(item) >= 0;
@@ -197,6 +250,14 @@ public class List {
     /*
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
+     */
+
+    /**
+     * returns index when item is given.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(int item) {
         // Replace the code below
@@ -210,6 +271,12 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list
     */
+
+    /**
+     * Adds all.
+     *
+     * @param      newArray  The new array
+     */
     public void addAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
@@ -220,6 +287,12 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
+
+    /**
+     * Removes all.
+     *
+     * @param      newArray  The new array
+     */
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
@@ -239,6 +312,15 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
+
+    /**
+     * { function_description }.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     { description_of_the_return_value }
+     */
     public List subList(int start, int end) {
         // write the logic for subList
         if (start < 0 || end < 0) {
@@ -267,6 +349,14 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
+
+    /**
+     * { function_description }.
+     *
+     * @param      lst   The list
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(List lst) {
         // Replace the code below
         return this.toString().equals(lst.toString());
@@ -278,12 +368,22 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
+
+    /**
+     * to clear all elements.
+     */
     public void clear() {
         size = 0;
         // write the logic for clear.
 
     }
 
+
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
