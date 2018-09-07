@@ -257,19 +257,7 @@ public class List {
     */
     public boolean equals(List list ) {
         // Replace the code below
-        if (size != list.size()) {
-            return false;
-        }
-
-
-        for (int i = 0; i < size; i++) {
-            if (list.contains(this.list[i])) {
-                return true;
-            }
-            return false;
-
-        }
-        return true;
+        return this.toString().equals(list.toString());
 
     }
 
@@ -279,7 +267,7 @@ public class List {
     * the simpler.
     */
     public void clear() {
-        int size = 0;
+        size = 0;
         // write the logic for clear.
 
     }
