@@ -104,7 +104,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (size == list.length) {
             resize();
         }
@@ -156,7 +156,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -189,7 +189,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 && index >= size) {
             return -1;
@@ -247,7 +247,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) >= 0;
 
@@ -265,7 +265,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -283,7 +283,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
         }
@@ -299,7 +299,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
@@ -455,8 +455,9 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -473,7 +474,7 @@ public class List {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
