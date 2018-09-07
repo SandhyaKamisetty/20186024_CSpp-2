@@ -260,7 +260,7 @@ public class List {
             if (list.contains(this.list[i])) {
                 return true;
             }
-        return false;
+            return false;
             
         }
         return true;
