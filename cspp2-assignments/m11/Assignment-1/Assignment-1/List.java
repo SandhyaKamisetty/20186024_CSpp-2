@@ -120,7 +120,7 @@ public class List {
      *
      */
     public void remove(int index) {
-        if (index > 0 && index < size) {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -146,7 +146,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (index < 0 && index > size) {
+        if (index < 0 && index >= size) {
             return -1;
         } else {
             return list[index];
@@ -223,7 +223,7 @@ public class List {
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
-            if(index != -1) {
+            while(index != -1) {
                 remove(index);
                 index = indexOf(newArray[i]);
 
