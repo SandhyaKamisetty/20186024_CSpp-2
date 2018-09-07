@@ -32,8 +32,7 @@ class Student {
         return this.name;
     }
 
-    
-    
+
     /**
      * { function_description }.
      *
