@@ -32,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * declaring list
+    */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -64,12 +67,15 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
-
+    /**
+     * { var_description }.
+     */
+    private static final int TEN = 10;
     /**
      * Constructs the object.
      */
     public List() {
-        list = new int[10];
+        list = new int[TEN];
         size = 0;
 
         // what are the two variables to be initialized here? think about the
@@ -296,7 +302,7 @@ public class List {
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
-            while(index != -1) {
+            while (index != -1) {
                 remove(index);
                 index = indexOf(newArray[i]);
 
