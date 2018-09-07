@@ -241,23 +241,35 @@ public class List {
     */
     public List subList(int start, int end) {
         // write the logic for subList
-        List subList = new List();
-        if (start < 0 || end < 0 || start > end) {
+        if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        for (int i = start; i < end; i++) {
-            subList.add(get(i));
+        if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
         }
-        return subList;
+        if (start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if (start == end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        List lst = new List();
+        for (int i = start; i < end; i++) {
+            lst.add(this.get(i));
+        }
+        return lst;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) {
+    public boolean equals(List lst) {
         // Replace the code below
-        return this.toString().equals(list.toString());
+        return this.toString().equals(lst.toString());
 
     }
 
