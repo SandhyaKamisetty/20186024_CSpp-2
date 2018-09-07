@@ -64,7 +64,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -340,7 +340,7 @@ public class Solution {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": 
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -351,7 +351,7 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
