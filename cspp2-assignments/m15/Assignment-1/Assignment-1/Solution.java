@@ -152,10 +152,13 @@ public class Solution {
      *
      */
 
+    
     /**
-     * remove item at a particular index.
+     * { function_description }.
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception{
         if (index >= 0 && index < size) {
@@ -313,6 +316,7 @@ public class Solution {
      array.
     */
 
+    
     /**
      * Removes all.
      *
@@ -342,13 +346,16 @@ public class Solution {
     and also if start is greater than end.
     */
 
+    
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public Solution subList(final int start, final int end) throws Exception{
         // write the logic for subList
