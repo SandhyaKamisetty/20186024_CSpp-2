@@ -56,6 +56,9 @@ public class Solution {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+    /**
+     * { var_description }.
+     */
     private static final int TEN = 10;
     /**
      * declaring size.
@@ -68,6 +71,9 @@ public class Solution {
     /*
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
+     */
+    /**
+     * Constructs the object.
      */
     public Solution() {
         list = new int[TEN];
@@ -299,7 +305,7 @@ public class Solution {
                 count++;
             }
         }
-        
+
         return count;
     }
     /*
@@ -315,7 +321,7 @@ public class Solution {
     public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
-            while(index != -1) {
+            while (index != -1) {
                 remove(index);
                 index = indexOf(newArray[i]);
 
@@ -342,7 +348,7 @@ public class Solution {
      */
     public Solution subList(final int start, final int end) {
         // write the logic for subList
-       if (start < 0 || end < 0) {
+        if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
@@ -376,7 +382,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Solution list ) {
+    public boolean equals(final Solution list) {
         // Replace the code below
         return this.toString().equals(list.toString());
 
@@ -468,8 +474,9 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -477,19 +484,22 @@ public class Solution {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 Solution object = l.subList(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                                            Integer.parseInt(arrstring3[1]));
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     Solution l2 = new Solution();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
