@@ -69,19 +69,14 @@ class SortedSet extends Set {
      * @return     returms elements.
      */
     public int[] headSet(final int end) throws Exception {
-        int[] result = new int[size];
-        int temp = 0;
-        if (size == 0 && end <= this.get(0)) {
+        
+        if (end <= get(0)) {
             throw new Exception ("Set Empty Exception");
         } else {
-            for (int i = 0; i < size; i++) {
-                if (set[i] < end) {
-                    result[i] = set[i];
-                    temp++;
-                } 
-            } 
+            return subSet(get(0), end);
+            
         }
-        return Arrays.copyOf(result, temp);
+        
     }
     /**
      * last function.
