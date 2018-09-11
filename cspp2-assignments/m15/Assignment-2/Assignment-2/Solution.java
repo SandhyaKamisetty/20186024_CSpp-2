@@ -33,7 +33,7 @@ class SortedSet extends Set {
         }
         sort(set);
     }
-    
+
     /**
      * { function_description }.
      *
@@ -64,7 +64,7 @@ class SortedSet extends Set {
             return Arrays.copyOf(result, k);
         }
     }
-    
+
     /**
      * { function_description }.
      *
@@ -84,7 +84,7 @@ class SortedSet extends Set {
         }
 
     }
-    
+
     /**
      * { function_description }.
      *
