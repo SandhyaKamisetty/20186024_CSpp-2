@@ -382,9 +382,9 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final Solution list) {
+    public boolean equals(final Solution list1) {
         // Replace the code below
-        return this.toString().equals(list.toString());
+        return this.toString().equals(list1.toString());
 
     }
 
@@ -483,11 +483,11 @@ public class Solution {
             case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
-            case "subList": 
-            
+            case "subList":
+
                 if (tokens.length != 2) {
                     break;
-             }   
+             }
                 String[] arrstring3 = tokens[1].split(",");
                 Solution object = l.subList(Integer.parseInt(arrstring3[0]),
                                             Integer.parseInt(arrstring3[1]));
