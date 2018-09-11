@@ -216,6 +216,16 @@ public class Solution {
         }
         // write the logic
     }
+    public int count(final int item) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
     /*
      Removes all of its elements that are contained in the specified int
      array.
@@ -353,6 +363,9 @@ public class Solution {
                         a[i] = Integer.parseInt(t2[i]);
                     l.removeAll(a);
                 }
+                break;
+            case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
             case "subList": {
                 if (tokens.length != 2) break;
