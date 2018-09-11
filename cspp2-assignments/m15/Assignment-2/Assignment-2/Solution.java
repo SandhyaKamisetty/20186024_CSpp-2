@@ -77,7 +77,7 @@ class SortedSet extends Set {
     public int[] headSet(final int end) throws Exception {
 
         if (end <= get(0)) {
-            throw new Exception ("Set Empty Exception");
+            throw new Exception("Set Empty Exception");
         } else {
             return subSet(get(0), end);
 
