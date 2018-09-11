@@ -378,7 +378,7 @@ public class Solution {
     /**
      * checks two lists.
      *
-     * @param      list  The list
+     * @param      list1  The list
      *
      * @return     { description_of_the_return_value }
      */
@@ -495,7 +495,6 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
