@@ -241,15 +241,27 @@ public class Solution {
     */
     public Solution subList(int start, int end) {
         // write the logic for subList
-        Solution subList = new Solution();
-        if (start < 0 || end < 0 || start > end) {
+       if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        for (int i = start; i < end; i++) {
-            subList.add(get(i));
+        if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
         }
-        return subList;
+        if (start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if (start == end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        Solution lst = new Solution();
+        for (int i = start; i < end; i++) {
+            lst.add(this.get(i));
+        }
+        return lst;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
