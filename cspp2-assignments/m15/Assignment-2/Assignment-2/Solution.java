@@ -45,7 +45,7 @@ class SortedSet extends Set {
         if (start > end) {
             throw new Exception("Invalid Arguments to Subset Exception");
             
-        }
+        } else {
         int[] result = new int[size];
         int k = 0;
         for (int i = 0; i < size; i++) {
@@ -60,6 +60,7 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, k);
     }
+    }
     /**
      * headset function.
      *
@@ -72,12 +73,13 @@ class SortedSet extends Set {
         int temp = 0;
         if (size == 0 && end <= 1) {
             throw new Exception ("Set Empty Exception");
-        }
-        for (int i = 0; i < size; i++) {
-            if (set[i] < end) {
-                result[i] = set[i];
-                temp++;
-            }
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (set[i] < end) {
+                    result[i] = set[i];
+                    temp++;
+                } 
+            } 
         }
         return Arrays.copyOf(result, temp);
     }
