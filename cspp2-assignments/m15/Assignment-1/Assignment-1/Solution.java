@@ -382,7 +382,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final Solution list ) {
+    public boolean equals(final Solution list) {
         // Replace the code below
         return this.toString().equals(list.toString());
 
@@ -474,8 +474,9 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -483,19 +484,22 @@ public class Solution {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 Solution object = l.subList(Integer.parseInt(arrstring3[0]),
                                             Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     Solution l2 = new Solution();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
