@@ -152,7 +152,6 @@ public class Solution {
      *
      */
 
-    
     /**
      * { function_description }.
      *
@@ -160,7 +159,7 @@ public class Solution {
      *
      * @throws     Exception  { exception_description }
      */
-    public void remove(final int index) throws Exception{
+    public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -316,7 +315,7 @@ public class Solution {
      array.
     */
 
-    
+
     /**
      * Removes all.
      *
@@ -346,9 +345,9 @@ public class Solution {
     and also if start is greater than end.
     */
 
-    
+
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      start      The start
      * @param      end        The end
@@ -357,7 +356,7 @@ public class Solution {
      *
      * @throws     Exception  { exception_description }
      */
-    public Solution subList(final int start, final int end) throws Exception{
+    public Solution subList(final int start, final int end) throws Exception {
         // write the logic for subList
         if (start < 0 || end < 0) {
             throw new Exception("Index Out of Bounds Exception");
@@ -509,7 +508,7 @@ public class Solution {
                                             Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
-                } 
+                }
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
