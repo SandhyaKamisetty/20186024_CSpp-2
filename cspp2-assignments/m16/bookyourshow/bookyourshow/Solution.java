@@ -24,14 +24,14 @@ class Show {
     /**
      * Constructs the object.
      *
-     * @param      moviename  The moviename
-     * @param      showdate   The showdate
-     * @param      seats     The seats 
+     * @param      mviename  The moviename
+     * @param      shwdate   The showdate
+     * @param      seats1     The seats 1
      */
-    Show(final String moviename, final String showdate, final String[] seats) {
-        this.moviename = moviename;
-        this.showdate = showdate;
-        this.seats = seats;
+    Show(final String mviename, final String shwdate, final String[] seats1) {
+        this.moviename = mviename;
+        this.showdate = shwdate;
+        this.seats = seats1;
     }
     /**
      * Gets the moviename.
@@ -251,8 +251,8 @@ class BookYourShow {
             for (int i = 0; i < seats.length; i++) {
                 for (int j = 0; j < bookedseats.length; j++) {
                     if (seats[i].equals(bookedseats[j])
-                        && !seats[i].equals("null")) {
-                        seats[i] = "null";
+                        && !seats[i].equals("N/A")) {
+                        seats[i] = "N/A";
                     }
                 }
             }
