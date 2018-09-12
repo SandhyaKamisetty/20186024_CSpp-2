@@ -20,7 +20,7 @@ class Show {
      */
     private String[] seats;
 
-    
+
     /**
      * Constructs the object.
      *
@@ -363,3 +363,6 @@ public final class Solution {
         }
     }
 }
+
+
+
