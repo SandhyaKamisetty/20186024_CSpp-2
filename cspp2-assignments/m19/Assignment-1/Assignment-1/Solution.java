@@ -86,7 +86,7 @@ public final class Solution {
         }
         int penality = Integer.parseInt(token[4]);
         if (penality > 0) {
-            System.out.println("Invalid max marks for "+token[0]);
+            System.out.println("Invalid penalty for "+token[0]);
             return;
         }
         if (testCases > 4) {
