@@ -84,7 +84,7 @@ public final class Solution {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
         }
-        System.out.println(questionCount + " are added to the quiz");
+        //System.out.println(questionCount + " are added to the quiz");
      
         /*int questionCount = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < questionCount; i++) {
