@@ -86,16 +86,16 @@ public final class Solution {
         }
         int maxCorrect = Integer.parseInt(token[2 + 1]);
         if(maxCorrect < 0) {
-            System.out.println("Invalid max marks for "+token[0]);
+            System.out.println("Invalid max marks for "+ token[0]);
             return;
         }
         int penality = Integer.parseInt(token[2 + 2]);
         if (penality > 0) {
-            System.out.println("Invalid penalty for "+token[0]);
+            System.out.println("Invalid penalty for "+ token[0]);
             return;
         }
         if (questionLin.length < (2 + 2)) {
-            System.out.println(token[0]+" does not have enough answer choices");
+            System.out.println(token[0] +" does not have enough answer choices");
             return;
         }
         if (testCases > (2 + 2)) {
