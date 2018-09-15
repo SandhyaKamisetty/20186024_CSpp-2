@@ -80,6 +80,10 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
+        if (token.length < 6) {
+            System.out.println("Error! Malformed question");
+            return;
+        }
         if (testCases > 4) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
