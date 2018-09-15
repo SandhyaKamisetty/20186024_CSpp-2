@@ -84,7 +84,7 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
-        int maxCorrect = Integer.parseInt(token[3]);
+        int maxCorrect = Integer.parseInt(token[2+1]);
         if(maxCorrect < 0) {
             System.out.println("Invalid max marks for "+token[0]);
             return;
