@@ -89,20 +89,20 @@ public final class Solution {
             System.out.println("Invalid max marks for "+token[0]);
             return;
         }
-        int penality = Integer.parseInt(token[4]);
+        int penality = Integer.parseInt(token[2+2]);
         if (penality > 0) {
             System.out.println("Invalid penalty for "+token[0]);
             return;
         }
-        if (questionLin.length < 4) {
+        if (questionLin.length < (2+2)) {
             System.out.println(token[0]+" does not have enough answer choices");
             return;
         }
-        if (testCases > 4) {
+        if (testCases > (2+2)) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
         }
-        //System.out.println(questionCount + " are added to the quiz");
+        System.out.println(questionCount + " are added to the quiz");
      
         /*int questionCount = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < questionCount; i++) {
