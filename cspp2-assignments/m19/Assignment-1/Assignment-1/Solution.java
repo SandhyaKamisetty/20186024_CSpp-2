@@ -80,7 +80,7 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
-        if (token.length < 6) {
+        if (token.length < 5) {
             System.out.println("Error! Malformed question");
             return;
         }
