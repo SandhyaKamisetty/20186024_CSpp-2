@@ -86,12 +86,12 @@ public final class Solution {
         }
         int maxCorrect = Integer.parseInt(token[2 + 1]);
         if(maxCorrect < 0) {
-            System.out.println("Invalid max marks for "+ token[0]);
+            System.out.println("Invalid max marks for " + token[0]);
             return;
         }
         int penality = Integer.parseInt(token[2 + 2]);
         if (penality > 0) {
-            System.out.println("Invalid penalty for "+ token[0]);
+            System.out.println("Invalid penalty for " + token[0]);
             return;
         }
         if (questionLin.length < (2 + 2)) {
@@ -103,7 +103,6 @@ public final class Solution {
             return;
         }
         System.out.println(questionCount + " are added to the quiz");
-     
         /*int questionCount = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
@@ -114,7 +113,7 @@ public final class Solution {
                     quiz.addToQuiz(new Item(c2[0],
                         Integer.parseInt(c2[1])));*/
         //System.out.println(“4 questions are added to the quiz");
-           
+
 
     }
 
