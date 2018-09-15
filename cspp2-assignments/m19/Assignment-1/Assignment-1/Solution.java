@@ -84,6 +84,11 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
+        int penality = Integer.parseInt(token[4]);
+        if (penality > 0) {
+            System.out.println("Invalid max marks for "+token[0]);
+            return;
+        }
         if (testCases > 4) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
