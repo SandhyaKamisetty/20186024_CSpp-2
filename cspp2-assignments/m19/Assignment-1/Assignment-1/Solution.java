@@ -94,6 +94,10 @@ public final class Solution {
             System.out.println("Invalid penalty for "+token[0]);
             return;
         }
+        if (questionLin.length < 4) {
+            System.out.println(token[0]+" does not have enough answer choices");
+            return;
+        }
         if (testCases > 4) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
