@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
+/**
+ * Class for quiz.
+ */
 class Quiz {
-    Quiz() {}
+    /**
+     * Constructs the object.
+     */
+    Quiz() {
+
+    }
 }
 /**
  * Solution class for code-eval.
@@ -54,7 +62,7 @@ public final class Solution {
             }
         }
     }
-   
+
 
 
     /**
@@ -64,7 +72,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+     final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -76,7 +85,7 @@ public final class Solution {
         String[] token = line.split(":");
         String[] questionLin = token[1].split(",");
         int testCases = Integer.parseInt(token[2]);
-        if(token[0] == null) {
+        if (token[0] == null) {
             System.out.println("Error! Malformed question");
             return;
         }
@@ -85,7 +94,7 @@ public final class Solution {
             return;
         }
         int maxCorrect = Integer.parseInt(token[2 + 1]);
-        if(maxCorrect < 0) {
+        if (maxCorrect < 0) {
             System.out.println("Invalid max marks for " + token[0]);
             return;
         }
@@ -95,7 +104,7 @@ public final class Solution {
             return;
         }
         if (questionLin.length < (2 + 2)) {
-            System.out.println(token[0] +" does not have enough answer choices");
+            System.out.println(token[0] + " does not have enough answer choices");
             return;
         }
         if (testCases > (2 + 2)) {
@@ -124,7 +133,8 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s,
+     final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -143,7 +153,7 @@ public final class Solution {
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
