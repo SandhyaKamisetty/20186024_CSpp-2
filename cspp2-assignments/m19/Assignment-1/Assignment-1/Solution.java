@@ -80,25 +80,25 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
-        if (token.length < (2+2+1)) {
+        if (token.length < (2 + 2 + 1)) {
             System.out.println("Error! Malformed question");
             return;
         }
-        int maxCorrect = Integer.parseInt(token[2+1]);
+        int maxCorrect = Integer.parseInt(token[2 + 1]);
         if(maxCorrect < 0) {
             System.out.println("Invalid max marks for "+token[0]);
             return;
         }
-        int penality = Integer.parseInt(token[2+2]);
+        int penality = Integer.parseInt(token[2 + 2]);
         if (penality > 0) {
             System.out.println("Invalid penalty for "+token[0]);
             return;
         }
-        if (questionLin.length < (2+2)) {
+        if (questionLin.length < (2 + 2)) {
             System.out.println(token[0]+" does not have enough answer choices");
             return;
         }
-        if (testCases > (2+2)) {
+        if (testCases > (2 + 2)) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
             return;
         }
