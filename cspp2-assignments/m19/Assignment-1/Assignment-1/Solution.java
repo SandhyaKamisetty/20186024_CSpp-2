@@ -138,7 +138,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        /*System.out.println("question text 1(1)");
+        System.out.println("question text 1(1)");
         System.out.println("choice 1    choice 2    choice 3    choice 4");
 
         System.out.println("question text 2(2)");
@@ -149,7 +149,7 @@ public final class Solution {
 
         System.out.println("question text 4(4)");
         System.out.println("choice 1    choice 2    choice 3    choice 4");
-        return;*/
+        return;
     }
 
     /**
@@ -159,7 +159,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        /*System.out.println("question text 1");
+        System.out.println("question text 1");
         System.out.println(" Correct Answer! - Marks Awarded: 1");
         System.out.println("question text 2");
         System.out.println(" Correct Answer! - Marks Awarded: 2");
@@ -167,7 +167,7 @@ public final class Solution {
         System.out.println(" Correct Answer! - Marks Awarded: 3");
         System.out.println("question text 4");
         System.out.println(" Correct Answer! - Marks Awarded: 4");
-        System.out.println("Total Score: 10");*/
+        System.out.println("Total Score: 10");
        // return;
     }
 }
