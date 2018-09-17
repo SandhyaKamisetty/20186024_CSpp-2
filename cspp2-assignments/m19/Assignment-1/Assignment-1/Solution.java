@@ -78,7 +78,7 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if (questionCount == 0) {
-            System.out.println("Quiz doesnot have questions");
+            System.out.println("Quiz does not have questions");
             return;
         }
         String line = s.nextLine();
